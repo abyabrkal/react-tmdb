@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../styles/extra.css'
 import Header from './elements/Header'
 import Home from './Home'
 
