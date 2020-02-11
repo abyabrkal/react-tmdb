@@ -1,8 +1,11 @@
 import React from 'react'
 
 const HeroImage = ({ image, title, text}) => {
+    const bgImgStyle = {
+        backgroundImage:`url(${image})`
+    }
     return (
-        <div image={image} className="bg-cover bg-center w-full h-600 relative hi-div-ext">
+        <div style={bgImgStyle} className="bg-cover bg-center w-full h-600px relative hi-div-ext">
             <div className="max-w-screen-xl p-5 mx-0 my-auto">
                 <div className="heroimage-text hi-text-ext">
                     <h1 className="text-5xl text-white md:text-4xl">{title}</h1>
