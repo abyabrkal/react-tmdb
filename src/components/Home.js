@@ -7,6 +7,8 @@ import {
     IMAGE_BASE_URL
 } from '../config';
 
+import NoImage from '../images/no_image.jpg'
+
 // import components
 import Grid from './elements/Grid'
 import Header from './elements/Header'
@@ -22,9 +24,12 @@ import { useHomeFetch } from './hooks/useHomeFetch'
 
 const Home = () => {
     const [{state, loading, error}, fetchMovies] = useHomeFetch();
+    const [searchTerm, setSearchTerm] = useState('');
 
     if(error) return <div>Something went Wrong!</div>
     if(!state.movies[0]) return <Spinner />
+
+    
 
     return (
         <>
@@ -35,7 +40,22 @@ const Home = () => {
                 />
             
             <SearchBar />
-            <Grid />
+            <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
+                {
+                    state.movies.map(movie => (
+                        <MovieThumb 
+                            key={movie.id}
+                            clickable
+                            image={movie.poster_path
+                                ? `${IMAGE_BASE_URL}${POSTER_SIZE}${movie.poster_path}`
+                                : NoImage 
+                            }
+                            movieId={movie.id}
+                            movieName={movie.original_title}
+                        />
+                    ))
+                }
+            </Grid>
             <MovieThumb />
             <Spinner />
             <LoadMoreButton />

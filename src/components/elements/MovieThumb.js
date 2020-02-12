@@ -1,9 +1,13 @@
 import React from 'react'
 
-const MovieThumb = () => {
+const MovieThumb = ({ image, clickable, movieId, movieName }) => {
     return (
         <div>
-            MovieThumb
+            {clickable ? (
+                <img className="mthumb-img-ext clickable" src={image} alt={movieName}/>
+            ) : (
+                <img className="mthumb-img-ext" src={image} alt={movieName}/>
+            )}
         </div>
     )
 }

@@ -2,8 +2,8 @@
 
 
 
-/* Grid Div styles - Extra */
-.grid-div {
+/* Grid Content Div styles - Extra */
+.gridcontent-div-ext {
   display: grid;
   grid-template-columns: repeat(5, minmax(100px, 1fr));
   grid-gap: 40px;
@@ -25,6 +25,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 
 
 /* HeroImage Div styles - Extra */
@@ -67,4 +68,31 @@
 /* BLUR */
 .blur1 {
   filter: blur(1px);
+}
+
+
+/* MovieThumb Div Extras */
+.mthumb-img-ext {
+  animation: animateMovieThumb 0.5s;
+  width: 100%;
+  transition: all 0.3s;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.mthumb-img-ext:hover {
+  opacity: 0.8;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+@keyframes animateMovieThumb {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
