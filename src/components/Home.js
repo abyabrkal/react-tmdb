@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import {
     API_URL,
     API_KEY,
-    API_BASE_URL,
     POSTER_SIZE,
     BACKDROP_SIZE,
     IMAGE_BASE_URL

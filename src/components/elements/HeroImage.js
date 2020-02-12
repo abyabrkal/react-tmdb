@@ -17,8 +17,8 @@ const HeroImage = ({ image, title, text}) => {
     
     return (
         <div style={bgImgStyle} className="bg-cover bg-center w-full h-600p relative hi-div-ext">
-            <div className="max-w-screen-xl p-5 mx-auto">
-                <div className="z-100 max-w-screen-md absolute bottom-40p mr-5 min-h-100p bg-gray-700 rounded-xl text-black md:max-w-full">
+            <div className="max-w-screen-xl mx-auto">
+                <div className="blur1 z-100 max-w-screen-md absolute bottom-40p mr-5 min-h-100p bg-gray-700 rounded-xl text-black md:max-w-full">
                     <h1 className="text-5xl text-white md:text-4xl">{title}</h1>
                     <p className="text-xl text-white leading-relaxed md:text-base md:leading-tight">{text}</p>
                 </div>
