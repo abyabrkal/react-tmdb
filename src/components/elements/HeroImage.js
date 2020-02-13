@@ -1,6 +1,9 @@
 import React from 'react'
 
-const HeroImage = ({ image, title, text}) => {
+import '../../styles/hero.css';
+
+
+const HeroImage = ({ image, title, text, nowshow}) => {
     const bgImgStyle = {
         backgroundImage:`url(${image})`
     }
@@ -15,16 +18,26 @@ const HeroImage = ({ image, title, text}) => {
     //         url(`${image}`), #1c1c1c`}
     // }
     
+    // return (
+    //     <div style={bgImgStyle} className="bg-cover bg-center w-full h-600p relative hi-div-ext">
+    //         <div className="max-w-screen-xl mx-auto">
+    //             <div className="blur1 z-100 max-w-screen-md absolute bottom-40p my-5 min-h-100p bg-gray-700 rounded-xl text-black md:max-w-full">
+    //                 <h1 className="text-2xl text-white md:text-5xl">{title}</h1>
+    //                 <p className="text-xl text-white leading-relaxed md:text-base md:leading-tight">{text}</p>
+    //             </div>
+    //         </div>
+    //     </div>
+    // )
+
     return (
-        <div style={bgImgStyle} className="bg-cover bg-center w-full h-600p relative hi-div-ext">
-            <div className="max-w-screen-xl mx-auto">
-                <div className="blur1 z-100 max-w-screen-md absolute bottom-40p my-5 min-h-100p bg-gray-700 rounded-xl text-black md:max-w-full">
-                    <h1 className="text-2xl text-white md:text-5xl">{title}</h1>
-                    <p className="text-xl text-white leading-relaxed md:text-base md:leading-tight">{text}</p>
-                </div>
-            </div>
-        </div>
-    )
+      <div class="wrapper">
+        <div class="news-item hero-item"></div>
+        <div class="news-item standard-item"></div>
+        <div class="news-item standard-item"></div>
+        <div class="news-item standard-item"></div>
+      </div>
+    );
 }
 
 export default HeroImage;
+

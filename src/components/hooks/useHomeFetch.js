@@ -17,7 +17,7 @@ export const useHomeFetch = () => {
 
         try {
             const result = await(await fetch(endpoint)).json();
-            console.log("Fetched hot from API -->", result)
+            console.log("Fetched POPULAR from API -->", result)
 
             setState(prev => ({
                 ...prev,
@@ -28,6 +28,7 @@ export const useHomeFetch = () => {
                 currentPage: result.page,
                 totalPages: result.total_pages
             }))
+            
             
         } catch (error) {
             setError(true);
@@ -42,5 +43,3 @@ export const useHomeFetch = () => {
 
     return [{state, loading, error}, fetchMovies];
 }
-
-

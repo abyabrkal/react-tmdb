@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
     SEARCH_BASE_URL,
     POPULAR_BASE_URL,
+    NOWSHOW_BASE_URL,
     POSTER_SIZE,
     BACKDROP_SIZE,
     IMAGE_BASE_URL
@@ -20,10 +21,12 @@ import Footer from './elements/Footer'
 
 // import hooks
 import { useHomeFetch } from './hooks/useHomeFetch'
+import { useHeroFetch } from './hooks/useHeroFetch'
 
 
 const Home = () => {
     const [{state, loading, error}, fetchMovies] = useHomeFetch();
+    const [{show, nsloading, nserror}, fetchNowShow] = useHeroFetch();
     const [searchTerm, setSearchTerm] = useState('');
 
     const searchMovies = search => {
@@ -41,6 +44,12 @@ const Home = () => {
 
         fetchMovies(endpoint)
     };
+
+    // const getNowShowing = () => {
+    //     const nowEndPoint = `${NOWSHOW_BASE_URL}`;
+
+    //     fetchNowShow(nowEndPoint);
+    // }
 
     if(error) return <div>Something went Wrong!</div>
     if(!state.movies[0]) return <Spinner />
