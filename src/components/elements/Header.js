@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './header.css'
+// import '../../styles/header.css'
 import MoveeLogo from '../../images/brand.png';
 import TMDBlogo from '../../images/tmdb_logo.svg';
 
 const Header = () => (
-    <div className="box-border px-0 py-5">
+    <div className="box-border my-5">
         <div className="max-w-screen-xl min-h-48 px-5 py-0 mx-0 my-auto box-border sm:m-w-screen-xl sm:min-h-0">
-            <img className="inline-block mx-0 w-32 sm:mt-2 sm:w-48" src={MoveeLogo} alt="movie-logo" />
+            <img className="inline-block mx-0 w-24 sm:mt-2 sm:w-48" src={MoveeLogo} alt="movie-logo" />
             <img className="w-20 mt-4 sm:inline-block sm:mt-16 sm:w-32 float-right inline-block" src={TMDBlogo} alt="tmdb-logo" />
         </div>
     </div>
