@@ -5224,8 +5224,8 @@ video {
   min-width: 100%;
 }
 
-.min-w-200p {
-  min-width: 200px;
+.min-w-150p {
+  min-width: 150px;
 }
 
 .object-contain {
@@ -15620,8 +15620,8 @@ video {
     min-width: 100%;
   }
 
-  .sm\:min-w-200p {
-    min-width: 200px;
+  .sm\:min-w-150p {
+    min-width: 150px;
   }
 
   .sm\:object-contain {
@@ -26017,8 +26017,8 @@ video {
     min-width: 100%;
   }
 
-  .md\:min-w-200p {
-    min-width: 200px;
+  .md\:min-w-150p {
+    min-width: 150px;
   }
 
   .md\:object-contain {
@@ -36414,8 +36414,8 @@ video {
     min-width: 100%;
   }
 
-  .lg\:min-w-200p {
-    min-width: 200px;
+  .lg\:min-w-150p {
+    min-width: 150px;
   }
 
   .lg\:object-contain {
@@ -46811,8 +46811,8 @@ video {
     min-width: 100%;
   }
 
-  .xl\:min-w-200p {
-    min-width: 200px;
+  .xl\:min-w-150p {
+    min-width: 150px;
   }
 
   .xl\:object-contain {

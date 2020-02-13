@@ -23,7 +23,7 @@ module.exports = {
         '600p': '600px',
       },
       minWidth: {
-        '200p': '200px',
+        '150p': '150px',
       },
       inset: {
         '40p': '40px',

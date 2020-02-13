@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
     API_URL,
     API_KEY,
@@ -64,7 +64,7 @@ const Home = () => {
                     ))
                 }
             </Grid>
-            <Spinner />
+            {loading && <Spinner />}
             <LoadMoreButton text="Load More" callback={loadMoreMovies}/>
         </>
     )

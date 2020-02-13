@@ -12,12 +12,18 @@ export const useHomeFetch = () => {
         setError(false);
         setLoading(true);
 
+        // find it is loading for first time or not
+        const isLoadMore = endpoint.search('page');
+
         try {
             const result = await(await fetch(endpoint)).json();
             console.log("Fetched hot from API -->", result)
+
             setState(prev => ({
                 ...prev,
-                movies: [...result.results],
+                movies: isLoadMore !== -1
+                ? [...prev.movies, ...result.results]
+                : [...result.results],
                 heroImage: prev.heroImage || result.results[0],
                 currentPage: result.page,
                 totalPages: result.total_pages
