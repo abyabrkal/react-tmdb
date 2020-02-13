@@ -16,6 +16,7 @@ import LoadMoreButton from './elements/LoadMoreButton'
 import MovieThumb from './elements/MovieThumb'
 import SearchBar from './elements/SearchBar'
 import Spinner from './elements/Spinner'
+import Footer from './elements/Footer'
 
 // import hooks
 import { useHomeFetch } from './hooks/useHomeFetch'
@@ -74,6 +75,7 @@ const Home = () => {
             </Grid>
             {loading && <Spinner />}
             <LoadMoreButton text="Load More" callback={loadMoreMovies}/>
+            <Footer />
         </>
     )
 }
