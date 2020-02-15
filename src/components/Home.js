@@ -4,6 +4,7 @@ import {
     POPULAR_BASE_URL,
     NOWSHOW_BASE_URL,
     POSTER_SIZE,
+    HEROS_SIZE,
     BACKDROP_SIZE,
     IMAGE_BASE_URL
 } from '../config';
@@ -18,6 +19,7 @@ import MovieThumb from './elements/MovieThumb'
 import SearchBar from './elements/SearchBar'
 import Spinner from './elements/Spinner'
 import Footer from './elements/Footer'
+import Slider from './elements/Slider'
 
 // import hooks
 import { useHomeFetch } from './hooks/useHomeFetch'
@@ -25,9 +27,11 @@ import { useHeroFetch } from './hooks/useHeroFetch'
 
 
 const Home = () => {
-    const [{state, loading, error}, fetchMovies] = useHomeFetch();
-    const [{show, nsloading, nserror}, fetchNowShow] = useHeroFetch();
+    const [{show, nsloading, nserror}] = useHeroFetch();
+    const [{state, loading, error}, fetchMovies] = useHomeFetch();  
     const [searchTerm, setSearchTerm] = useState('');
+
+    console.log(show)
 
     const searchMovies = search => {
         const endpoint = search ? `${SEARCH_BASE_URL}${search}` : `${POPULAR_BASE_URL}`
@@ -58,13 +62,19 @@ const Home = () => {
 
     return (
         <>
-            {!searchTerm && (
+            {/* {!searchTerm && (
                 <HeroImage 
                     image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.heroImage.backdrop_path}`}
                     title={state.heroImage.original_title}
                     text={state.heroImage.overview}
                 />
-            )}
+                
+            )} */}
+            <Slider nowshowing={show.nowshow}/>
+            <HeroImage 
+                    // image={`${IMAGE_BASE_URL}${HEROS_SIZE}${show.nowshow.backdrop_path}`}
+                    nowshowing={show.nowshow}
+                />
             <SearchBar callback={searchMovies}/>
             <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
                 {

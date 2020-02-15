@@ -20,9 +20,13 @@
     width: 50%;
   }
   
-  .hero-item {
+  /* .hero-item {
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/divinity-ori-sin.jpg');
-  }
+  } */
+/* 
+  .heroItem {
+    background-image: url('http://image.tmdb.org/t/p/w1280/nuombZHTH6CsFo13Dos1skw5N4T.jpg');
+  } */
   
   .standard-item:nth-child(2) {
     background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/53819/re7-chris-large.jpg");

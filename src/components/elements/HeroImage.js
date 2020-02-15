@@ -2,10 +2,41 @@ import React from 'react'
 
 import '../../styles/hero.css';
 
+import {
+  SEARCH_BASE_URL,
+  POPULAR_BASE_URL,
+  NOWSHOW_BASE_URL,
+  POSTER_SIZE,
+  HEROS_SIZE,
+  BACKDROP_SIZE,
+  IMAGE_BASE_URL
+} from '../../config';
 
-const HeroImage = ({ image, title, text, nowshow}) => {
-    const bgImgStyle = {
-        backgroundImage:`url(${image})`
+
+const HeroImage = ({ nowshowing }) => {
+    // const bgImgStyle = {
+    //     backgroundImage:`url(${image})`
+    // http://image.tmdb.org/t/p/w780/nows
+    // }
+
+    console.log("NOWSHOWING_DATAPROP --> ", nowshowing[0].backdrop_path)
+    const herobg = "http://image.tmdb.org/t/p/w1280/nuombZHTH6CsFo13Dos1skw5N4T.jpg"
+    const heroItem = {
+      // backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[0].backdrop_path})`
+      // backgroundImage: `url(${IMAGE_BASE_URL}${HEROS_SIZE}${nowshowing[0].backdrop_path})`
+      backgroundImage: `url(http://image.tmdb.org/t/p/w1280${nowshowing[0].backdrop_path})`
+    }
+    
+    const standardItem1 = {
+      backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[1].backdrop_path})`
+    }
+    
+    const standardItem2 = {
+      backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[2].backdrop_path})`
+    }
+    
+    const standardItem3 = {
+      backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[3].backdrop_path})`
     }
     // const bgImgStyle = {
     //     background: ${image =>
@@ -31,10 +62,10 @@ const HeroImage = ({ image, title, text, nowshow}) => {
 
     return (
       <div class="wrapper">
-        <div class="news-item hero-item"></div>
-        <div class="news-item standard-item"></div>
-        <div class="news-item standard-item"></div>
-        <div class="news-item standard-item"></div>
+        <div class="news-item hero-item heroItem" style={heroItem}></div>
+        <div class="news-item standard-item" style={standardItem1}></div>
+        <div class="news-item standard-item" style={standardItem2}></div>
+        <div class="news-item standard-item" style={standardItem3}></div>
       </div>
     );
 }

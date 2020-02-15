@@ -17,21 +17,20 @@ export const useHeroFetch = () => {
 
         try {
             const result = await(await fetch(endpoint)).json();
-            console.log("Fetched NOWSHOWING from API -->", result)
+            console.log("Fetched NOWSHOWING from API -->", result.results)
 
             setShow(prev => ({
                 ...prev,
+                // nowshow: [...result.results],
                 nowshow: prev 
-                ? [...prev.noshow, ...result.results]
+                ? [...prev.nowshow, ...result.results]
                 : [...result.results],
-                heroImage: prev.heroImage || result.results[0],
-                currentPage: result.page,
-                totalPages: result.total_pages
             }))
-            
+
             
         } catch (error) {
             setError(true);
+            console.log('Hero Error->', error)
         }
         
         setLoading(false);
@@ -39,10 +38,11 @@ export const useHeroFetch = () => {
 
     useEffect(() => {
         fetchNowShow(`${NOWSHOW_BASE_URL}&region=in&with_original_language=ml`);
-        fetchNowShow(`${NOWSHOW_BASE_URL}&region=ae&with_original_language=en`);
+        //fetchNowShow(`${NOWSHOW_BASE_URL}&region=ae&with_original_language=en`);
     }, [])
+    // console.log("NOWSHOW STATE[F] -->", show)
 
-    return [{show, nsloading, nserror}, fetchNowShow];
+    return [{show, nsloading, nserror}];
 }
 
 
