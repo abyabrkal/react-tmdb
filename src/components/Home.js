@@ -64,17 +64,11 @@ const Home = () => {
         <>
             {/* {!searchTerm && (
                 <HeroImage 
-                    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.heroImage.backdrop_path}`}
-                    title={state.heroImage.original_title}
-                    text={state.heroImage.overview}
+                    nowshowing={show.nowshow}
                 />
                 
             )} */}
             <Slider nowshowing={show.nowshow}/>
-            <HeroImage 
-                    // image={`${IMAGE_BASE_URL}${HEROS_SIZE}${show.nowshow.backdrop_path}`}
-                    nowshowing={show.nowshow}
-                />
             <SearchBar callback={searchMovies}/>
             <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
                 {
