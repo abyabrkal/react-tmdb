@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import { NOWSHOW_BASE_URL } from '../../config';
 
 
-export const useHeroFetch = () => {
+export const useSlideFetch = () => {
     const [show, setShow] = useState({ nowshow: []});
     const [nsloading, setLoading] = useState(false);
     const [nserror, setError] = useState(false);

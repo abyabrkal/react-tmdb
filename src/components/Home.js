@@ -23,11 +23,11 @@ import Slider from './elements/Slider'
 
 // import hooks
 import { useHomeFetch } from './hooks/useHomeFetch'
-import { useHeroFetch } from './hooks/useHeroFetch'
+import { useSlideFetch } from './hooks/useSlideFetch'
 
 
 const Home = () => {
-    const [{show, nsloading, nserror}] = useHeroFetch();
+    const [{show, nsloading, nserror}] = useSlideFetch();
     const [{state, loading, error}, fetchMovies] = useHomeFetch();  
     const [searchTerm, setSearchTerm] = useState('');
 
