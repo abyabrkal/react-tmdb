@@ -68,7 +68,7 @@ const Home = () => {
                 />
                 
             )} */}
-            <Slider nowshowing={show.nowshow}/>
+            <Slider nowshowing={show.nowshow} clickable/>
             <SearchBar callback={searchMovies}/>
             <Grid header={searchTerm ? 'Search Results' : 'Popular Movies'}>
                 {

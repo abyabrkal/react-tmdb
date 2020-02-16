@@ -33,7 +33,7 @@ const Slider = ({ nowshowing }) => {
             {
                 nowshowing.map(movie => {
                     return (
-                        <article key={movie.id} className="mini-card module module-article article" style={bgNSImage(movie.poster_path)} id="mini-post-280085">
+                        <article key={movie.id} className="mini-card module module-article article" style={bgNSImage(movie.poster_path)} src={movie}>
                             {/* <header className="mini-article-card-header">
                                 <div className="mini-article-card-title">
                                     <div className="mini-article-subhead">
