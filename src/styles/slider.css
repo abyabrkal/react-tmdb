@@ -230,9 +230,9 @@ a {
   b {
     font-weight: 700;
   }
-  p {
+  /* p {
     margin: 0 0 1rem 0;
-  }
+  } */
   .white-underline-links a {
     position: relative;
     font-weight: 700;

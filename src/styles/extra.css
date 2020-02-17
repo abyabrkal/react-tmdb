@@ -129,7 +129,7 @@
 
 .movieinfo-text {
   padding: 40px;
-  color: #fff;
+  color: rgb(250, 250, 250);
   overflow: hidden;
 }
 .mv-text-h1 {
@@ -144,22 +144,35 @@
 
 .mv-text-h3 {
   font-size: 16px;
+  font-weight: 800;
   line-height: 0;
   margin-top: 30px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
 }
 
 .mv-text-p {
   font-size: 18px;
   line-height: 26px;
+  color: #aeacb1;
 }
 
 .rating-director {
   display: flex;
   justify-content: flex-start;
+
+  @media screen and (max-width: 520px) {
+    display: block !important;
+  }
+}
+
+.div-score {
+  color: gray;
 }
 
 .score {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   width: 35px;
@@ -168,11 +181,19 @@
   color: #000;
   font-weight: 800;
   border-radius: 25px;
-  margin: 0px 0 0 0;
+  margin: 0px 0 0 0; */
+  font-size: 2.5rem;
+  margin: 0 3px;
+  color: #0872eb;
+  text-shadow: 0px 0px 16px rgba(0, 0, 255, 0.77);
 }
 
-.director {
+.ml-info-gap {
   margin: 0 0 0 40px;
+}
+
+.topdown-p {
+  display: block;
 }
 
 @keyframes animateMovieinfo {
