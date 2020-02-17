@@ -6,6 +6,7 @@ import Actor from './elements/Actor'
 import MovieInfo from './elements/MovieInfo'
 import Grid from './elements/Grid'
 import Spinner from './elements/Spinner'
+import Footer from '../components/elements/Footer'
 
 import { useMovieFetch } from './hooks/useMovieFetch'
 
@@ -20,9 +21,12 @@ const Movie = ({ movieId }) => {
             <Navigation movie={movie.title}/>
             <MovieInfo movie={movie}/>
             <MovieInfoBar />
-            <Grid>
-                <Actor />
+            <Grid header="Actors">
+                { movie.actors.map(actor => (
+                    <Actor key={actor.credit_id} actor={actor} />
+                ))}
             </Grid>
+            <Footer />
         </>
     )
 }
