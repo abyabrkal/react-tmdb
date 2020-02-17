@@ -6,18 +6,17 @@ import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from '../../config'
 import MovieThumb from './MovieThumb'
 
 
-
-
 const MovieInfo = ({ movie }) => {
     const bg = movie.backdrop_path
       ? `url('${IMAGE_BASE_URL}${BACKDROP_SIZE}${movie.backdrop_path}')`
       : '#000';
-    const mvInfoBg = {
-        backgroundImage: bg
-      }
+    // const mvInfoBg = {
+    //     backgroundImage: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), bg
+    //   }
+      //style={mvInfoBg}
 
     return (
-        <div style={mvInfoBg} className="mvinfo-dv-ext">
+        <div  className="mvinfo-dv-ext"  style={{background: `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), ${bg}`}}>
             <div className="movieinfo_content">
                 <div className="movieinfo-thumb">
                     <MovieThumb 
@@ -42,7 +41,7 @@ const MovieInfo = ({ movie }) => {
                     <div className="director">
                         <h3 className="mv-text-h3">DIRECTOR{movie.directors.length > 1 ? 'S' : ''}</h3>
                         {movie.directors.map(element => (
-                        <p className="m-0" key={element.credit_id}>{element.name}</p>
+                        <p className="m-2" key={element.credit_id}>{element.name}</p>
                         ))}
                     </div>
                     </div>
