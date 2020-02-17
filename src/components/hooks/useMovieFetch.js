@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { API_URL, API_KEY } from '../../config'
 
-const useMovieFetch = movieId => {
+export const useMovieFetch = movieId => {
     const [state, setState] = useState({})
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [error, setError] = useState(false)
 
     // Callback function used to stop the infinte loop happening due to continous change based on movieId
@@ -42,4 +42,3 @@ const useMovieFetch = movieId => {
     return [state, loading, error];
 }
 
-export default useMovieFetch
