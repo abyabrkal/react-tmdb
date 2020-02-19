@@ -42,6 +42,7 @@ export const useSlideFetch = () => {
     }, [])
     // console.log("NOWSHOW STATE[F] -->", show)
 
+
     return [{show, nsloading, nserror}];
 }
 
