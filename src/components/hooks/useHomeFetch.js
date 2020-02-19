@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 
 import { POPULAR_BASE_URL } from '../../config';
 
 
-export const useHomeFetch = () => {
+export const useHomeFetch = searchTerm => {
     const [state, setState] = useState({ movies: []});
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -38,8 +38,22 @@ export const useHomeFetch = () => {
     }
 
     useEffect(() => {
-        fetchMovies(`${POPULAR_BASE_URL}`);
+        // If state is available in Session Storage, access from there
+        // Else, fetch via API
+        if(sessionStorage.popularState) {
+            setState(JSON.parse(sessionStorage.popularState))
+            setLoading(false)
+        } else {
+            fetchMovies(`${POPULAR_BASE_URL}`);
+        }
     }, [])
+
+    useEffect(() => {
+        // If there is no searchTerm (for initial/more loading), save the data in session storage
+        if(!searchTerm) {
+            sessionStorage.setItem('popularState', JSON.stringify(state))
+        }
+    }, [searchTerm, state])
 
     return [{state, loading, error}, fetchMovies];
 }

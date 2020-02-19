@@ -27,9 +27,10 @@ import { useSlideFetch } from './hooks/useSlideFetch'
 
 
 const Home = () => {
-    const [{show, nsloading, nserror}] = useSlideFetch();
-    const [{state, loading, error}, fetchMovies] = useHomeFetch();  
     const [searchTerm, setSearchTerm] = useState('');
+    const [{show, nsloading, nserror}] = useSlideFetch();
+    const [{state, loading, error}, fetchMovies] = useHomeFetch(searchTerm);  
+    
 
     console.log(show)
 
