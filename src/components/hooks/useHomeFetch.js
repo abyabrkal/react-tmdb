@@ -17,7 +17,6 @@ export const useHomeFetch = searchTerm => {
 
         try {
             const result = await(await fetch(endpoint)).json();
-            console.log("Fetched POPULAR from API -->", result)
 
             setState(prev => ({
                 ...prev,

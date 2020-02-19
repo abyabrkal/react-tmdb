@@ -14,7 +14,7 @@ const MovieInfo = ({ movie }) => {
     //     backgroundImage: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), bg
     //   }
       //style={mvInfoBg}
-    console.log("MOVIEINFO -> ", movie);
+      
     return (
         <div  className="mvinfo-dv-ext"  style={{background: `linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.75)), ${bg}`}}>
             <div className="movieinfo_content">

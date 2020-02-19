@@ -19,7 +19,6 @@ const HeroImage = ({ nowshowing }) => {
     // http://image.tmdb.org/t/p/w780/nows
     // }
 
-    console.log("NOWSHOWING_DATAPROP --> ", nowshowing[0].backdrop_path)
     const herobg = "http://image.tmdb.org/t/p/w1280/nuombZHTH6CsFo13Dos1skw5N4T.jpg"
     const heroItem = {
       // backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[0].backdrop_path})`

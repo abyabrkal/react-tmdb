@@ -17,7 +17,6 @@ export const useSlideFetch = () => {
 
         try {
             const result = await(await fetch(endpoint)).json();
-            console.log("Fetched NOWSHOWING from API -->", result.results)
 
             setShow(prev => ({
                 ...prev,
@@ -30,18 +29,26 @@ export const useSlideFetch = () => {
             
         } catch (error) {
             setError(true);
-            console.log('Hero Error->', error)
         }
         
         setLoading(false);
     }
 
     useEffect(() => {
-        fetchNowShow(`${NOWSHOW_BASE_URL}&region=in&with_original_language=ml`);
-        //fetchNowShow(`${NOWSHOW_BASE_URL}&region=ae&with_original_language=en`);
+        if(sessionStorage.nowShowingState) {
+            setShow(JSON.parse(sessionStorage.nowShowingState))
+            setLoading(false)
+            console.log("From SessionStorage -> NowShow")
+        } else {
+            fetchNowShow(`${NOWSHOW_BASE_URL}&region=ae&with_original_language=en`);
+            fetchNowShow(`${NOWSHOW_BASE_URL}&region=in&with_original_language=ml`);
+            console.log("From API FETCH (2)")
+        } 
     }, [])
-    // console.log("NOWSHOW STATE[F] -->", show)
 
+    useEffect(() => {
+        sessionStorage.setItem('nowShowingState', JSON.stringify(show))
+    }, [show])
 
     return [{show, nsloading, nserror}];
 }
