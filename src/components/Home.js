@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import {
     SEARCH_BASE_URL,
     POPULAR_BASE_URL,
-    NOWSHOW_BASE_URL,
     POSTER_SIZE,
-    HEROS_SIZE,
-    BACKDROP_SIZE,
     IMAGE_BASE_URL
 } from '../config';
 
@@ -28,7 +25,7 @@ import { useSlideFetch } from './hooks/useSlideFetch'
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [{show, nsloading, nserror}] = useSlideFetch();
+    const [{show, ...slidedata}] = useSlideFetch();
     const [{state, loading, error}, fetchMovies] = useHomeFetch(searchTerm);  
     
 
