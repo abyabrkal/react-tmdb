@@ -61,11 +61,11 @@ const HeroImage = ({ nowshowing }) => {
     // )
 
     return (
-      <div class="wrapper">
-        <div class="news-item hero-item heroItem" style={heroItem}></div>
-        <div class="news-item standard-item" style={standardItem1}></div>
-        <div class="news-item standard-item" style={standardItem2}></div>
-        <div class="news-item standard-item" style={standardItem3}></div>
+      <div className="wrapper">
+        <div className="news-item hero-item heroItem" style={heroItem}></div>
+        <div className="news-item standard-item" style={standardItem1}></div>
+        <div className="news-item standard-item" style={standardItem2}></div>
+        <div className="news-item standard-item" style={standardItem3}></div>
       </div>
     );
 }
