@@ -33,9 +33,9 @@ const Slider = ({ nowshowing }) => {
 
             <div className="mini-card-grid">
             {
-                nowshowing.map(movie => {
+                nowshowing.slice(0,8).map(movie => {
                     return (
-                        <article key={movie.id} className="mini-card module module-article article" style={bgNSImage(movie.poster_path)} src={movie}>
+                        <article key={movie.id} className="mini-card module module-article article cursor-pointer" style={bgNSImage(movie.poster_path)} src="\google.com">
                         </article>  
                     )
                 })

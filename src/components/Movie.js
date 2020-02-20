@@ -22,7 +22,7 @@ const Movie = ({ movieId }) => {
             <MovieInfo movie={movie}/>
             <MovieInfoBar />
             <Grid header="Actors">
-                { movie.actors.map(actor => (
+                { movie.actors.slice(0,15).map(actor => (
                     <Actor key={actor.credit_id} actor={actor} />
                 ))}
             </Grid>
