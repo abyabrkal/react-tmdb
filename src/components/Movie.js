@@ -21,7 +21,7 @@ const Movie = ({ movieId }) => {
         <>
             <Navigation movie={movie.title}/>
             <MovieInfo movie={movie}/>
-            <MovieInfoBar />
+            {/* <MovieInfoBar /> */}
             <Grid header="Actors">
                 { movie.actors.slice(0,15).map(actor => (
                     <Actor key={actor.credit_id} actor={actor} />
