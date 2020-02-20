@@ -36,7 +36,6 @@ const Slider = ({ nowshowing }) => {
             <div className="mini-card-grid">
             {
                 nowshowing.slice(0,8).map(movie => {
-                    console.log("Slide Movie -->", movie)
                     return (
                         <Link to={`/${movie.id}`}>
                             <article key={movie.id} className="mini-card module module-article article cursor-pointer" style={bgNSImage(movie.poster_path)}>

@@ -38,11 +38,9 @@ export const useSlideFetch = () => {
         if(sessionStorage.nowShowingState) {
             setShow(JSON.parse(sessionStorage.nowShowingState))
             setLoading(false)
-            console.log("From SessionStorage -> NowShow")
         } else {
             fetchNowShow(`${NOWSHOW_BASE_URL}&region=ae&with_original_language=en`);
             fetchNowShow(`${NOWSHOW_BASE_URL}&region=in&with_original_language=ml`);
-            console.log("From API FETCH (2)")
         } 
     }, [])
 

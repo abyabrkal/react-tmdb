@@ -10,7 +10,7 @@ import NoImage from '../images/no_image.jpg'
 
 // import components
 import Grid from './elements/Grid'
-import HeroImage from './elements/HeroImage'
+import Error from '../components/Error'
 import LoadMoreButton from './elements/LoadMoreButton'
 import MovieThumb from './elements/MovieThumb'
 import SearchBar from './elements/SearchBar'
@@ -51,7 +51,7 @@ const Home = () => {
     //     fetchNowShow(nowEndPoint);
     // }
 
-    if(error) return <div>Something went Wrong!</div>
+    if(error) return <Error />
     if(!state.movies[0]) return <Spinner />
 
     

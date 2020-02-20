@@ -204,3 +204,49 @@
     opacity: 1;
   }
 }
+
+
+/* Something Wrong Page */
+/* .h1-404 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(rgb(6, 122, 216), rgb(87, 9, 211));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.error-div{
+  background: url('../images/404.png') bg-indigo-500 cover no-repeat;
+}
+
+/* .err-shadow { 
+  color: white; 
+  font: bold 52px Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #028dfe, 
+               2px 2px #028dfe, 
+               3px 3px #028dfe;
+  -webkit-transition: all 0.12s ease-out;
+  -moz-transition:    all 0.12s ease-out;
+  -ms-transition:     all 0.12s ease-out;
+  -o-transition:      all 0.12s ease-out;
+}
+.err-shadow:hover {
+  position: relative; 
+  top: -3px; 
+  left: -3px; 
+  text-shadow: 1px 1px #6f02fe, 
+               2px 2px #6f02fe, 
+               3px 3px #6f02fe, 
+               4px 4px #6f02fe, 
+               5px 5px #6f02fe, 
+               6px 6px #6f02fe;
+} */
+
+.parent-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8d2cdd;
+  color: whitesmoke;
+  width: 100%;
+  height: 88vh;
+}

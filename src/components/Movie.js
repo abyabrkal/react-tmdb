@@ -7,13 +7,14 @@ import MovieInfo from './elements/MovieInfo'
 import Grid from './elements/Grid'
 import Spinner from './elements/Spinner'
 import Footer from '../components/elements/Footer'
+import Error from '../components/Error'
 
 import { useMovieFetch } from './hooks/useMovieFetch'
 
 const Movie = ({ movieId }) => {
     const [movie, loading, error] = useMovieFetch(movieId)
 
-    if (error) return <div>Something went wrong ...</div>;
+    if (error) return <Error />;
     if (loading) return <Spinner />;
 
     return (

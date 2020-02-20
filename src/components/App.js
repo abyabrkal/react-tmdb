@@ -5,7 +5,7 @@ import '../styles/extra.css'
 import Header from './elements/Header'
 import Home from './Home'
 import Movie from './Movie'
-import NotFound from './NotFound'
+import Error from './Error'
 
 
 const App = () => (
@@ -14,7 +14,7 @@ const App = () => (
         <Router>
             <Home path="/" />
             <Movie path="/:movieId"/>
-            <NotFound default/>
+            <Error default/>
         </Router>
     </>
 );
