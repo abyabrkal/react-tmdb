@@ -3,7 +3,7 @@ import { Link } from '@reach/router'
 
 // import '../../styles/header.css'
 import MoveeLogo from '../../images/brand.png';
-import TMDBlogo from '../../images/tmdb_logo.svg';
+
 
 const Header = () => (
     <div className="box-border my-5">
@@ -11,7 +11,6 @@ const Header = () => (
             <Link to="/">
                 <img className="inline-block mx-0 w-24 sm:mt-2 sm:w-48" src={MoveeLogo} alt="app-logo" />
             </Link>
-            <img className="w-20 mt-4 sm:inline-block sm:mt-16 sm:w-32 float-right inline-block" src={TMDBlogo} alt="tmdb-logo" />
         </div>
     </div>
 )

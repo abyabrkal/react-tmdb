@@ -1,9 +1,12 @@
 import React from 'react'
 
+import TMDBlogo from '../../images/tmdb_logo.svg';
+
 const Footer = () => {
     return (
-        <div className="bottom-0 h-32 p-10 bg-gray-500 mt-24 text-indigo-100 hover:bg-indigo-200 hover:text-gray-600">
-            <h3>A project created with React Hooks, Tailwind CSS, TMDb and more...</h3>
+        <div className="bottom-0 h-48 p-10 mt-24 text-indigo-500 footer-gradient flex justify-between">
+            <p className="text-gray-800">A project created with React Hooks, Tailwind CSS, TMDb and more...</p>
+            <img className="w-20 sm:w-32" src={TMDBlogo} alt="tmdb-logo" />
         </div>
     )
 }
