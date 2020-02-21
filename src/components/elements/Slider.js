@@ -7,12 +7,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from '../../config'
 
 const Slider = ({ nowshowing }) => {
     const posterURL = "http://image.tmdb.org/t/p/w500";
-    // const heroItem = {
-    //   // backgroundImage: `url(${IMAGE_BASE_URL}${BACKDROP_SIZE}${nowshowing[0].backdrop_path})`
-    //   // backgroundImage: `url(${IMAGE_BASE_URL}${HEROS_SIZE}${nowshowing[0].backdrop_path})`
-    //   backgroundImage: `url(http://image.tmdb.org/t/p/w1280${nowshowing[0].backdrop_path})`
-    // backgroundImage:`url(http://image.tmdb.org/t/p/w1280${image})`
-    // }
+
 
     const bgNSImage = (poster) => ({ 
         backgroundImage: `url(${IMAGE_BASE_URL}${POSTER_SIZE}${poster})`,
@@ -20,12 +15,6 @@ const Slider = ({ nowshowing }) => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
     })
-
-    //style={bgNSImage(movie.poster_path)}
-    //style={{backgroundImage: `url(${posterURL}${movie.poster_path})`}} 
-    /* <article key={movie.id} className="mini-card module module-article article" style={bgNSImage(movie.poster_path)} src={movie}>
-                        </article> */
-    
 
     return (
         <div className="popular-articles">
