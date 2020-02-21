@@ -245,7 +245,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #8d2cdd;
+  background: #500ccf;
   color: whitesmoke;
   width: 100%;
   height: 88vh;
@@ -256,4 +256,11 @@
 .footer-gradient {
   /* background-color: #000000; */
   background-image: linear-gradient(180deg, #100e17 0%, #000000 74%);
+}
+
+.brand-gradient {
+  font-size: 72px;
+  background: -webkit-linear-gradient( #500ccf, #1b6eda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

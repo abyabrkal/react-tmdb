@@ -16,7 +16,7 @@ import MovieThumb from './elements/MovieThumb'
 import SearchBar from './elements/SearchBar'
 import Spinner from './elements/Spinner'
 import Footer from './elements/Footer'
-import Slider from './elements/Slider1'
+import Slider from './elements/Slider'
 
 // import hooks
 import { useHomeFetch } from './hooks/useHomeFetch'

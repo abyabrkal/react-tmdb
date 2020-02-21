@@ -22,7 +22,7 @@ const SearchBar = ({ callback }) => {
         <div className="w-full h-24  pl-6 pr-0 py-5 box-border text-white">
             <div className="max-w-screen-xl w-full h-12 bg-gray-300 mx-auto rounded-lg relative text-white">
                 <FontAwesome className="absolute left-10p top-5p text-indigo-500 z-1000" name="search" size="2x" />
-                <input className="text-3xl absolute left-40p mx-4 my-auto py-0 pl-0 pr-16 border-0 w-11/12 bg-transparent h-10 text-white border-box focus:outline-none md:text-3xl" type="text" placeholder="Search Movies" onChange={doSearch} value={state}/>
+                <input className="text-3xl absolute left-40p mx-4 my-auto py-0 pl-0 pr-16 border-0 w-11/12 bg-transparent h-10 text-indigo-500 border-box focus:outline-none md:text-3xl" type="text" placeholder="Search Movies" onChange={doSearch} value={state}/>
             </div>
         </div>
     )
