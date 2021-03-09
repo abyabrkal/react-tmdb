@@ -2,11 +2,11 @@
 
 ## This side project was based on React Hooks, styled using [Tailwind CSS](https://tailwindcss.com/) with REST API data from [TMDb](https://www.themoviedb.org/).
 
-## In the project directory, you can run:
+### In the project directory, you can run:
 
-### `npm install`
+#### `npm install`
 
-### `npm start`
+#### `npm start`
 
 ---
 
